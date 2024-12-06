@@ -1,3 +1,6 @@
+# Developed by: Nvaeen R
+# RegisterNumber: 24900811 
+
 # FULL_ADDER_SUBTRACTOR
 
 Implementation-of-Full-Adder-and-Full-subtractor-circuit
@@ -38,18 +41,88 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
+
+i)FULL ADDER
+
+
+![full adder](https://github.com/user-attachments/assets/9d0e343c-5afb-400d-8cec-3aaa3cdbeea6)
+
+
+ii)FULL SUBTRACTOR
+
+
+![full subtracter](https://github.com/user-attachments/assets/99c96acc-7412-4b67-9fd2-b54851f5bc54)
+
 **Procedure**
 
-Write the detailed procedure here
+1.Type the program in Quartus software.
+
+2.Compile and run the program.
+
+3.Generate the RTL schematic and save the logic diagram.
+
+4.Create nodes for inputs and outputs to generate the timing diagram.
+
+5.For different input combinations generate the timing diagram.
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
 
-**RTL Schematic**
 
-**Output Timing Waveform**
+```
+
+i)FULL ADDER
+
+module fa(a,b,cin,sum,carry);
+input a,b,cin;
+output sum,carry;
+assign sum=( (a ^ b)^cin);
+assign carry= ( (a & b)| ( cin &(a ^ b )));
+endmodule
+
+ii)FULL SUBTRACTOR
+
+module fs(a,b,bin,difference,borrow);
+input a,b,bin;
+output difference,borrow;
+assign difference= ( (a ^ b)^bin);
+assign borrow= ( ( ~a & b)| ( bin & (~(a ^ b ))));
+endmodule
+
+```
+
+**RTL**
+
+
+i)FULL ADDER
+
+
+![Screenshot 2024-11-18 164020](https://github.com/user-attachments/assets/d8798ed0-d340-498e-9e2c-52b1f8f70179)
+
+
+ii)FULL SUBTRACTOR
+
+
+![Screenshot 2024-11-18 164534](https://github.com/user-attachments/assets/e5ed487a-528c-46d7-8dfc-06ae92c5ecf8)
+
+**Output**
+
+
+i)FULL ADDER
+
+
+![Screenshot 2024-11-18 164141](https://github.com/user-attachments/assets/a1dd66fd-0588-4d1c-a082-a5bab3f326ba)
+
+
+
+ii)FULL SUBTRACTOR
+
+
+![Screenshot 2024-11-18 164838](https://github.com/user-attachments/assets/bc1c6218-15bf-4341-b249-812e67e134b0)
+
+
+
 
 **Result:**
 
