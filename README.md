@@ -1,5 +1,6 @@
-# Developed by: Nvaeen R
-# RegisterNumber: 24900811 
+**Developed by: Nvaeen R**
+
+**RegisterNumber: 24900811** 
 
 # FULL_ADDER_SUBTRACTOR
 
